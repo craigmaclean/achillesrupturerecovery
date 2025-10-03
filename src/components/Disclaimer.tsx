@@ -1,0 +1,21 @@
+import { AlertCircle } from "lucide-react";
+import { Alert, AlertDescription } from "@/components/ui/alert";
+
+const Disclaimer = () => {
+  return (
+    <section className="py-4 px-4 bg-muted/30">
+      <div className="container mx-auto max-w-6xl">
+        <Alert className="border py-2">
+          <AlertCircle className="h-4 w-4" />
+          <AlertDescription className="ml-2 text-xs leading-relaxed">
+            <strong className="font-semibold">Medical Disclaimer:</strong> This content is for educational purposes only. I am not a medical professional. 
+            Always consult a qualified healthcare provider for medical advice. 
+            <a href="#" className="underline ml-1 hover:text-primary transition-colors">Read full disclaimer</a>
+          </AlertDescription>
+        </Alert>
+      </div>
+    </section>
+  );
+};
+
+export default Disclaimer;
