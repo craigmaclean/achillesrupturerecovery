@@ -1,6 +1,7 @@
-import { Star, ShoppingCart, ExternalLink } from "lucide-react";
+import { Star, ShoppingCart, ExternalLink, LucideLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import Link from "next/link";
 
 const ProductShowcase = () => {
   const products = [
@@ -13,7 +14,8 @@ const ProductShowcase = () => {
       originalPrice: "$119.99",
       image: "https://m.media-amazon.com/images/I/51ADFAE9DpL._AC_SX679_.jpg",
       features: ["Durable, semi-rigid shell", "Lightweight design", "Non-marking, skid resistant rubber tread"],
-      affiliate: true
+      affiliate: true,
+      link: "https://amzn.to/46DGHoV",
     },
     {
       name: "Shower Protection Cover",
@@ -24,7 +26,8 @@ const ProductShowcase = () => {
       originalPrice: "$34.99",
       image: "https://m.media-amazon.com/images/I/71UyWAHHFBL._SX522_.jpg",
       features: ["Superior waterproof protection", "Reusable design", "Easy application"],
-      affiliate: true
+      affiliate: true,
+      link: "https://amzn.to/4mKPVVb",
     },
     {
       name: "Leg Raise Pillow",
@@ -35,7 +38,8 @@ const ProductShowcase = () => {
       originalPrice: "$48.99",
       image: "https://m.media-amazon.com/images/I/71XtNtI61AL._AC_SX679_.jpg",
       features: ["Adjustable 10-in-1 design", "Designed for improved blood flow", "Premium memory foam"],
-      affiliate: true
+      affiliate: true,
+      link: "https://amzn.to/4nx4YCR",
     },
     {
       name: "Walking Boot Socks",
@@ -46,7 +50,8 @@ const ProductShowcase = () => {
       originalPrice: "",
       image: "https://m.media-amazon.com/images/I/61bvjklcr8L._SX466_.jpg",
       features: ["Compatible with all walking boots/braces", "Loose-fitting and non-binding", "Special design for reduced skin irritation"],
-      affiliate: true
+      affiliate: true,
+      link: "https://amzn.to/478f0Vb",
     }
   ];
 
@@ -58,7 +63,7 @@ const ProductShowcase = () => {
             Recommended Recovery Products
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Carefully selected recovery aids that can help accelerate your healing process. 
+            Carefully selected recovery aids that can help accelerate your achilles tendon rupture healing process. 
             All products are recommended by healthcare professionals and backed by positive patient outcomes.
           </p>
         </div>
@@ -144,14 +149,16 @@ const ProductShowcase = () => {
                   </div>
 
                   {/* CTA Button */}
-                  <Button 
-                    className="w-full bg-gradient-hero hover:opacity-90 transition-all duration-300"
-                    size="sm"
-                  >
-                    <ShoppingCart className="h-4 w-4 mr-2" />
-                    View on Amazon
-                    <ExternalLink className="h-3 w-3 ml-1" />
-                  </Button>
+                  <Link href={product.link} target="_blank" rel="noopener noreferrer">
+                    <Button 
+                      className="w-full bg-gradient-hero hover:opacity-90 transition-all duration-300"
+                      size="sm"
+                    >
+                      <ShoppingCart className="h-4 w-4 mr-2" />
+                      View on Amazon
+                      <ExternalLink className="h-3 w-3 ml-1" />
+                    </Button>
+                  </Link>
                 </div>
               </CardContent>
             </Card>
