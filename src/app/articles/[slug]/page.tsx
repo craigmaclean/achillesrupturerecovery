@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from 'next/link';
 import { Badge } from "@/components/ui/badge";
 import { Clock } from "lucide-react";
 import { getAllPublishedArticles, getArticle } from "@/lib/articles";
@@ -63,8 +64,8 @@ export default async function ArticlePage(
   return (
     <article className="mx-auto max-w-3xl">
       <nav aria-label="Breadcrumb" className="mb-4 text-sm text-muted-foreground">
-        <a href="/" className="hover:underline">Home</a> <span>›</span>{" "}
-        <a href="/articles" className="hover:underline">Articles</a> <span>›</span>{" "}
+        <Link href="/" className="hover:underline">Home</Link> <span>›</span>{" "}
+        <Link href="/articles" className="hover:underline">Articles</Link> <span>›</span>{" "}
         <span className="text-foreground">{article.title}</span>
       </nav>
 
