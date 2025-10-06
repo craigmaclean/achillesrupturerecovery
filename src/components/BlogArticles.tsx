@@ -2,6 +2,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Clock, ArrowRight } from "lucide-react";
+import Image from "next/image";
 
 const articles = [
   {
@@ -75,10 +76,12 @@ const BlogArticles = () => {
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <div className="relative h-48 overflow-hidden">
-                <img
+                <Image
                   src={article.image}
                   alt={article.title}
-                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                  fill
+                  className="object-cover transition-transform duration-300 group-hover:scale-105"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 />
                 <Badge className="absolute top-4 left-4 bg-primary text-primary-foreground">
                   {article.category}

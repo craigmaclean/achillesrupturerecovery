@@ -66,7 +66,7 @@ const RecoveryStages = () => {
             The Standard Recovery Journey
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Follow this evidence-based timeline for optimal healing. Every person's recovery is unique, so work closely with your healthcare team to adjust as needed.
+            Follow this evidence-based timeline for optimal healing. Every person&apos;s recovery is unique, so work closely with your healthcare team to adjust as needed.
           </p>
         </div>
 

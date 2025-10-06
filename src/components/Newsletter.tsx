@@ -50,7 +50,7 @@ const Newsletter = () => {
           {/* Benefits */}
           <div>
             <h3 className="text-xl font-semibold text-foreground mb-6">
-              What you'll receive:
+              {"What you'll receive:"}
             </h3>
             <ul className="space-y-4">
               {benefits.map((benefit, index) => (
@@ -137,12 +137,12 @@ const Newsletter = () => {
                     Welcome to Your Recovery Community!
                   </h3>
                   <p className="text-muted-foreground mb-4">
-                    Check your email for your free recovery timeline and first week's guidance.
+                    {"Check your email for your free recovery timeline and first week's guidance."}
                   </p>
                   <div className="bg-secondary/10 border border-secondary/20 rounded-lg p-4">
                     <p className="text-sm text-muted-foreground">
                       <strong className="text-foreground">Next step:</strong> Look for an email from 
-                      "Achilles Recovery Team" and add us to your contacts for best delivery.
+                      Achilles Recovery Team and add us to your contacts for best delivery.
                     </p>
                   </div>
                 </div>

@@ -1,7 +1,8 @@
-import { Star, ShoppingCart, ExternalLink, LucideLink } from "lucide-react";
+import { Star, ShoppingCart, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Link from "next/link";
+import Image from "next/image";
 
 const ProductShowcase = () => {
   const products = [
@@ -76,20 +77,22 @@ const ProductShowcase = () => {
             >
               <CardContent className="p-0">
                 {/* Product Image */}
-                <div className="relative overflow-hidden">
-                  <img
+                <div className="relative overflow-hidden h-48">
+                  <Image
                     src={product.image}
                     alt={product.name}
-                    className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105"
+                    fill
+                    className="object-cover transition-transform duration-300 group-hover:scale-105"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                   />
                   {product.affiliate && (
-                    <div className="absolute top-3 left-3">
+                    <div className="absolute top-3 left-3 z-10">
                       <span className="bg-secondary/90 text-secondary-foreground text-xs font-medium px-2 py-1 rounded-full">
                         Recommended
                       </span>
                     </div>
                   )}
-                  <div className="absolute top-3 right-3">
+                  <div className="absolute top-3 right-3 z-10">
                     <span className="bg-destructive text-destructive-foreground text-xs font-medium px-2 py-1 rounded-full">
                       25% OFF
                     </span>
