@@ -65,19 +65,12 @@ All colors MUST be HSL for proper theming
     --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
@@ -109,6 +102,7 @@ All colors MUST be HSL for proper theming
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
     --ring: 212.7 26.8% 83.9%;
+
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -125,50 +119,40 @@ All colors MUST be HSL for proper theming
     @apply border-border;
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     @apply bg-background text-foreground;
   }
 }
 
+/* --- Utilities --- */
 @layer utilities {
-  .bg-gradient-hero {
-    background: var(--gradient-hero);
-  }
-  
-  .bg-gradient-card {
-    background: var(--gradient-card);
-  }
-  
-  .bg-gradient-subtle {
-    background: var(--gradient-subtle);
-  }
+  /* v3/v4-safe: ensure `border-border` exists even if Tailwind doesn't generate it */
+  .border-border { border-color: hsl(var(--border)); }
 
-  .bg-clip-text {
-    -webkit-background-clip: text;
-    background-clip: text;
-  }
-  
-  .text-transparent {
-    color: transparent;
-  }
-  
-  .shadow-card {
-    box-shadow: var(--shadow-card);
-  }
-  
-  .shadow-section {
-    box-shadow: var(--shadow-section);
-  }
-  
-  .shadow-hero {
-    box-shadow: var(--shadow-hero);
-  }
-  
-  .transition-smooth {
-    transition: var(--transition-smooth);
-  }
-  
-  .transition-bounce {
-    transition: var(--transition-bounce);
-  }
+  .bg-gradient-hero { background: var(--gradient-hero); }
+  .bg-gradient-card { background: var(--gradient-card); }
+  .bg-gradient-subtle { background: var(--gradient-subtle); }
+
+  .bg-clip-text { -webkit-background-clip: text; background-clip: text; }
+  .text-transparent { color: transparent; }
+
+  .shadow-card { box-shadow: var(--shadow-card); }
+  .shadow-section { box-shadow: var(--shadow-section); }
+  .shadow-hero { box-shadow: var(--shadow-hero); }
+
+  .transition-smooth { transition: var(--transition-smooth); }
+  .transition-bounce { transition: var(--transition-bounce); }
+}
+
+
+/* Only apply prose styles inside markdown/MDX articles */
+.article-body {
+  @apply prose prose-slate dark:prose-invert max-w-none;
+  @apply prose-headings:font-semibold prose-h2:mt-10 prose-h3:mt-6;
+  @apply prose-p:my-4 prose-li:my-1 prose-a:underline-offset-2 hover:prose-a:text-primary;
+  @apply prose-img:rounded-xl;
 }

@@ -1,7 +1,8 @@
-import { ArrowRight, Shield, Clock, Users } from "lucide-react";
+import { ArrowRight, ArrowDown, Shield, Clock, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Image from "next/image"
 import heroImage from "/public/hero-achilles-recovery.jpg";
+import Link from "next/link";
 
 const Hero = () => {
   return (
@@ -42,16 +43,22 @@ const Hero = () => {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button 
-                size="lg" 
-                className="bg-gradient-hero hover:opacity-90 shadow-hero transition-all duration-300 hover:shadow-xl hover:scale-105"
-              >
-                Start Recovery Guide
-                <ArrowRight className="h-5 w-5 ml-2" />
-              </Button>
-              <Button variant="outline" size="lg">
-                Download Timeline PDF
-              </Button>
+              <Link href="/just-injured">
+                <Button 
+                  size="lg" 
+                  className="bg-gradient-hero hover:opacity-90 shadow-hero transition-all duration-300 hover:shadow-xl hover:scale-105"
+                >
+                  Just Injured? Start Here
+                  <ArrowRight className="h-5 w-5 ml-2" />
+                </Button>
+              </Link>
+
+              <Link href="#recovery-journey">
+                <Button variant="outline" size="lg">
+                  Standard Recovery Journey
+                  <ArrowDown className="h-5 w-5 ml-2" />
+                </Button>
+              </Link>
             </div>
           </div>
 

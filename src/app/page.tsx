@@ -6,6 +6,7 @@ import RecoveryStages from "@/components/RecoveryStages";
 import ProductShowcase from "@/components/ProductShowcase";
 import BlogArticles from "@/components/BlogArticles";
 import Newsletter from "@/components/Newsletter";
+import RecoveryGuidance from "@/components/RecoveryGuidance";
 
 export default function Home() {
   return (
@@ -15,7 +16,7 @@ export default function Home() {
       <RecoveryStages />
       <ProductShowcase />
       <BlogArticles />
-      <Newsletter />
+      <RecoveryGuidance />
     </main>
   );
 }

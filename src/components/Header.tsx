@@ -3,7 +3,7 @@
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { useState } from "react";
-import { Menu, X, Heart, Activity } from "lucide-react";
+import { Menu, X, Heart, Activity, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Header = () => {
@@ -13,7 +13,6 @@ const Header = () => {
   const navigation = [
     { name: "Home", href: "/" },
     { name: "Just Injured?", href: "/just-injured" },
-    { name: "Just Injured? (Sidebar)", href: "/just-injured-sidebar" },
   ];
 
   return (
@@ -46,10 +45,12 @@ const Header = () => {
                 {item.name}
               </Link>
             ))}
-            <Button variant="default" size="sm" className="ml-4">
-              <Heart className="h-4 w-4 mr-2" />
-              Newsletter
-            </Button>
+            <Link href="">
+              <Button variant="default" size="sm" className="ml-4">
+                <ArrowRight className="h-4 w-4 mr-0" />
+                Start Here
+              </Button>
+            </Link>
           </div>
 
           {/* Mobile menu button */}
@@ -84,10 +85,10 @@ const Header = () => {
                   {item.name}
                 </Link>
               ))}
-              <Button variant="default" size="sm" className="mt-4 w-full">
+              {/*<Button variant="default" size="sm" className="mt-4 w-full">
                 <Heart className="h-4 w-4 mr-2" />
                 Newsletter
-              </Button>
+              </Button>*/}
             </div>
           </div>
         )}
