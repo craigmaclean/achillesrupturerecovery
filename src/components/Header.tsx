@@ -12,7 +12,7 @@ const Header = () => {
 
   const navigation = [
     { name: "Home", href: "/" },
-    { name: "Just Injured?", href: "/just-injured" },
+    { name: "Articles", href: "/articles" },
   ];
 
   return (
@@ -45,10 +45,10 @@ const Header = () => {
                 {item.name}
               </Link>
             ))}
-            <Link href="">
-              <Button variant="default" size="sm" className="ml-4">
+            <Link href="/just-injured">
+              <Button variant="default" size="sm" className="ml-2">
+                Just Injured? Start Here
                 <ArrowRight className="h-4 w-4 mr-0" />
-                Start Here
               </Button>
             </Link>
           </div>

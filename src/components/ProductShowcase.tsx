@@ -64,7 +64,7 @@ const ProductShowcase = () => {
             Recommended Recovery Products
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Carefully selected recovery aids that can help accelerate your achilles tendon rupture healing process. 
+            The following recovery aids can help accelerate your achilles tendon rupture healing process. 
             All products are recommended by healthcare professionals and backed by positive patient outcomes.
           </p>
         </div>
@@ -86,13 +86,13 @@ const ProductShowcase = () => {
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                   />
                   {product.affiliate && (
-                    <div className="absolute top-3 left-3 z-10">
+                    <div className="absolute top-3 right-3 z-10">
                       <span className="bg-secondary/90 text-secondary-foreground text-xs font-medium px-2 py-1 rounded-full">
                         Recommended
                       </span>
                     </div>
                   )}
-                  <div className="absolute top-3 right-3 z-10">
+                  <div className="absolute top-3 right-3 z-10 hidden">
                     <span className="bg-destructive text-destructive-foreground text-xs font-medium px-2 py-1 rounded-full">
                       25% OFF
                     </span>
@@ -169,7 +169,7 @@ const ProductShowcase = () => {
         </div>
 
         {/* Disclaimer */}
-        <div className="mt-12 text-center">
+        <div className="mt-12 text-center hidden">
           <div className="inline-block bg-card border border-border rounded-lg p-4 max-w-2xl">
             <p className="text-xs text-muted-foreground">
               <strong className="text-foreground">Medical Disclaimer:</strong> These are affiliate links. 
