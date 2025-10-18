@@ -1,11 +1,1 @@
-{
-  "version": 4,
-  "routes": {},
-  "dynamicRoutes": {},
-  "notFoundRoutes": [],
-  "preview": {
-    "previewModeId": "f4b71d1183b884512bf1588e7808cd9b",
-    "previewModeSigningKey": "30e9ecf4675db1b96d754c24f84df087c696967c8e388ccb26d856e643d29572",
-    "previewModeEncryptionKey": "8251b3313c5c3698c1a4152eaec2d10fd341bff648f0b78d3f086f4a8f2f6c15"
-  }
-}
+{"version":4,"routes":{"/articles/nutrition-guide-for-achilles-tendon-recovery":{},"/articles/returning-to-sports-after-achilles-injury":{},"/articles/mental-health-during-achilles-tendon-rupture-recovery":{},"/articles/understanding-achilles-tendon-injuries":{}},"dynamicRoutes":{"/articles/[slug]":{"dataRoute":null,"dataRouteRegex":null,"fallback":null,"fallbackRevalidate":false,"fallbackSourceRoute":"/articles/[slug]","routeRegex":"^\\/articles\\/([^/]+?)(?:\\/)?$","allowHeader":[]}},"notFoundRoutes":[],"preview":{"previewModeId":"f4b71d1183b884512bf1588e7808cd9b","previewModeSigningKey":"30e9ecf4675db1b96d754c24f84df087c696967c8e388ccb26d856e643d29572","previewModeEncryptionKey":"8251b3313c5c3698c1a4152eaec2d10fd341bff648f0b78d3f086f4a8f2f6c15"}}

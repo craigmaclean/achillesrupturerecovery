@@ -1,5 +1,3 @@
-"use client";
-
 import Hero from "@/components/Hero";
 import Disclaimer from "@/components/Disclaimer";
 import RecoveryStages from "@/components/RecoveryStages";
@@ -8,7 +6,7 @@ import BlogArticles from "@/components/BlogArticles";
 import Newsletter from "@/components/Newsletter";
 import RecoveryGuidance from "@/components/RecoveryGuidance";
 
-export default function Home() {
+export default async function Home() {
   return (
     <main>
       <Hero />

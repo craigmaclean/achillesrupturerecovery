@@ -48,7 +48,7 @@ export default function SubPageLayout({
       )}
 
       {/* Main Content Area */}
-      <article className="container mx-auto max-w-7xl px-8 py-8 md:py-0">
+      <article className="container mx-auto max-w-7xl px-8 py-12">
         <div className="prose prose-slate max-w-none
           prose-headings:font-bold 
           prose-h2:text-2xl prose-h2:mt-10 prose-h2:mb-4
