@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 const Disclaimer = () => {
   return (
-    <section className="py-4 px-4 bg-muted/30">
+    <section className="py-4 px-4 bg-transparent">
       <div className="container mx-auto max-w-6xl">
         <Alert className="border py-2">
           <AlertCircle className="h-4 w-4" />

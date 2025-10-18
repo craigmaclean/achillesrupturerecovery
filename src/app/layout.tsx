@@ -5,6 +5,7 @@ import { Toaster } from "@/components/ui/toaster"
 import { Toaster as Sonner } from "@/components/ui/sonner"
 import { TooltipProvider } from "@/components/ui/tooltip"
 import Header from "@/components/Header"
+import PHProvider from '../components/PostHogProvider' // adjust path
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -21,14 +22,16 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={inter.className} suppressHydrationWarning>
-          <TooltipProvider>
-            <div className="min-h-screen bg-background">
-              <Header />
-              {children}
-            </div>
-            <Toaster />
-            <Sonner />
-          </TooltipProvider>
+          <PHProvider>
+            <TooltipProvider>
+              <div className="min-h-screen bg-background">
+                <Header />
+                {children}
+              </div>
+              <Toaster />
+              <Sonner />
+            </TooltipProvider>
+          </PHProvider>
       </body>
     </html>
   )

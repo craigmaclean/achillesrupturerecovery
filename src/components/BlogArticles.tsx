@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import ArticleCard from "@/components/ArticleCard";
 import { getAllPublishedArticles } from "@/lib/articles";
+import Link from "next/link"
 
 const BlogArticles = async () => {
   // Get first 6 articles from your content directory
@@ -29,9 +30,11 @@ const BlogArticles = async () => {
         </div>
 
         <div className="text-center mt-12">
-          <Button size="lg" className="shadow-lg">
-            View All Articles
-          </Button>
+          <Link href="/articles">
+            <Button size="lg" className="shadow-lg">
+              View All Articles
+            </Button>
+          </Link>
         </div>
       </div>
     </section>
